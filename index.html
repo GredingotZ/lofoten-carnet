@@ -28,58 +28,42 @@
   --night:#06101F; --twilight:#1F3A66; --dusk:#4C6FA3; --day:#FFD166;
   --shadow:0 2px 12px rgba(0,0,0,.4);
 }
-html{font-size:19px;scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html{font-size:19px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,Segoe UI,Roboto,sans-serif;line-height:1.5}
 h1,h2,h3{font-family:"Bricolage Grotesque","Atkinson Hyperlegible",system-ui,sans-serif;font-weight:800;line-height:1.1;text-wrap:balance;margin:0}
-h1{font-size:2.4rem;letter-spacing:-.01em}
 h2{font-size:1.6rem;margin:0 0 .6rem}
 h3{font-size:1.15rem;margin:0 0 .4rem}
 p{margin:0 0 .7rem}
 a{color:var(--accent-ink)}
-.wrap{max-width:52rem;margin:0 auto;padding:0 1rem 4rem}
+.wrap{max-width:52rem;margin:0 auto;padding:1.2rem 1rem 4rem}
 header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:2px solid var(--line);padding:.6rem 0}
 .topin{max-width:52rem;margin:0 auto;padding:0 1rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
 .brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.1rem;margin-right:auto}
 .brand span{color:var(--accent-ink)}
 .sz{display:flex;gap:.3rem}
 .sz button{min-width:2.6rem;min-height:2.6rem;border:2px solid var(--ink);background:var(--surface);color:var(--ink);border-radius:.5rem;font:inherit;font-weight:700;cursor:pointer}
-.sz button:focus-visible,.chips a:focus-visible,.tab:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.chips{display:flex;gap:.4rem;overflow-x:auto;padding:.4rem 0 .2rem;width:100%;scrollbar-width:thin}
-.chips a{white-space:nowrap;text-decoration:none;color:var(--ink);background:var(--surface2);border:2px solid transparent;border-radius:999px;padding:.35rem .8rem;font-weight:700;font-size:.9rem}
-.chips a:hover{border-color:var(--accent)}
-.hero{padding:2rem 0 1.2rem}
-.hero .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:700;color:var(--accent-ink);margin-bottom:.5rem}
-.hero p.lead{font-size:1.15rem;max-width:36rem;color:var(--muted);margin-top:.8rem}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.7rem;margin:1rem 0 2rem}
+.sz button:focus-visible,.nav button:focus-visible,.tab:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.nav{display:flex;gap:.4rem;overflow-x:auto;padding:.4rem 0 .2rem;width:100%;scrollbar-width:thin}
+.nav button{white-space:nowrap;color:var(--ink);background:var(--surface2);border:2px solid transparent;border-radius:999px;padding:.4rem .9rem;font:inherit;font-weight:700;font-size:.9rem;cursor:pointer;min-height:2.4rem}
+.nav button[aria-selected="true"]{background:var(--accent);color:#052B1B;border-color:var(--accent)}
+section{display:none}
+section.on{display:block}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.7rem;margin:.6rem 0 1.2rem}
 .tile{background:var(--surface);border:2px solid var(--line);border-radius:.8rem;padding:.8rem .9rem;box-shadow:var(--shadow)}
 .tile .k{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
 .tile .v{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.7rem;line-height:1.1;margin:.2rem 0;font-variant-numeric:tabular-nums}
 .tile .s{font-size:.9rem;color:var(--muted)}
-section{margin:0 0 2.4rem;scroll-margin-top:7rem}
 .card{background:var(--surface);border:2px solid var(--line);border-radius:.9rem;padding:1rem 1.1rem;box-shadow:var(--shadow)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:.8rem}
-/* timeline */
 .tl{display:grid;gap:.5rem}
-.day{display:grid;grid-template-columns:5.2rem 1fr;gap:.7rem;background:var(--surface);border:2px solid var(--line);border-radius:.8rem;padding:.7rem .8rem}
-.day .d{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.05rem;line-height:1.15}
-.day .d small{display:block;font-family:"Atkinson Hyperlegible",sans-serif;font-weight:400;color:var(--muted);font-size:.8rem}
-.day .w{font-size:1.5rem;line-height:1;margin-top:.3rem}
-.day .base{font-weight:700;color:var(--accent-ink)}
-.day p{margin:.15rem 0 0;font-size:.95rem}
-.day.best{border-color:var(--accent)}
-.day.rain{border-style:dashed}
-/* déroulé */
 .dayhead{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent-ink);margin:1.2rem 0 .5rem;padding-bottom:.25rem;border-bottom:2px solid var(--accent)}
 .step{display:grid;grid-template-columns:5.2rem 1fr;gap:.7rem;background:var(--surface);border:2px solid var(--line);border-radius:.8rem;padding:.7rem .8rem;font-size:.95rem}
 .step .t{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;line-height:1.15;font-variant-numeric:tabular-nums}
 .step.best{border-color:var(--accent)}
-.step .links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.45rem}
-.step .links a{display:inline-block;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border:2px solid var(--accent);border-radius:999px;padding:.25rem .7rem;font-weight:700;font-size:.85rem;min-height:1.8rem}
+.links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.45rem}
+.links a{display:inline-block;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border:2px solid var(--accent);border-radius:999px;padding:.25rem .7rem;font-weight:700;font-size:.85rem;min-height:1.8rem}
 .code{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:.06em;color:var(--ink);background:var(--surface2);padding:.05rem .45rem;border-radius:.4rem;white-space:nowrap}
 .ref{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
-@media (max-width:600px){.step{grid-template-columns:4.4rem 1fr}}
-/* tables */
 .tbl{width:100%;border-collapse:collapse;font-size:.95rem}
 .tbl th,.tbl td{text-align:left;padding:.45rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
 .tbl th{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -89,7 +73,6 @@ section{margin:0 0 2.4rem;scroll-margin-top:7rem}
 .pill.ok{background:var(--ok);color:#052B1B}
 .pill.warn{background:var(--warn);color:#2B1F00}
 .pill.no{background:var(--nofly);color:#2B0A05}
-.pill.zone{background:var(--surface2);color:var(--ink)}
 .note{border-left:5px solid var(--accent);background:var(--accent-soft);padding:.6rem .9rem;border-radius:.4rem;margin:.6rem 0}
 .note.red{border-color:var(--rorbu);background:color-mix(in srgb,var(--rorbu) 14%,var(--surface))}
 figure{margin:0 0 .8rem}
@@ -101,24 +84,21 @@ figcaption{font-size:.85rem;color:var(--muted);margin-top:.35rem}
 .spots li{margin:.15rem 0}
 ul{padding-left:1.2rem;margin:.2rem 0 .6rem}
 li{margin:.2rem 0}
-/* tabs */
 .tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.7rem}
 .tab{border:2px solid var(--line);background:var(--surface2);color:var(--ink);border-radius:.6rem;padding:.5rem .9rem;font:inherit;font-weight:700;cursor:pointer;min-height:2.6rem}
 .tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .panel[hidden]{display:none}
 .kv{display:grid;grid-template-columns:auto 1fr;gap:.25rem .8rem;font-size:.95rem}
 .kv b{white-space:nowrap}
-/* ND chart */
 .nd{display:grid;gap:.3rem}
 .nd div{display:grid;grid-template-columns:8rem 1fr 5.5rem;align-items:center;gap:.5rem;font-size:.9rem}
 .nd i{display:block;height:1.4rem;border-radius:.3rem;background:linear-gradient(90deg,var(--day),var(--rorbu));}
 .nd b{font-family:"Bricolage Grotesque",sans-serif;text-align:right}
-/* checklist */
 .check label{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line);cursor:pointer}
 .check input{width:1.4rem;height:1.4rem;margin-top:.15rem;accent-color:var(--accent)}
 .check input:checked+span{text-decoration:line-through;color:var(--muted)}
-footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padding-top:1rem}
-@media (max-width:600px){h1{font-size:1.9rem}.day{grid-template-columns:4.4rem 1fr}}
+footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padding-top:1rem;margin-top:2rem}
+@media (max-width:600px){.step{grid-template-columns:4.4rem 1fr}}
 </style>
 
 <header class="top">
@@ -129,33 +109,21 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
       <button type="button" data-sz="0" aria-label="Taille normale">A</button>
       <button type="button" data-sz="1" aria-label="Texte plus grand">A+</button>
     </div>
-    <nav class="chips" aria-label="Sections">
-      <a href="#plan">Itinéraire</a><a href="#meteo">Météo &amp; nuit</a><a href="#aurores">Aurores</a><a href="#drone">Drone</a><a href="#reglages">Réglages</a><a href="#listes">Check-lists</a><a href="#culture">Culture</a>
+    <nav class="nav" role="tablist" aria-label="Onglets">
+      <button type="button" role="tab" data-s="meteo" aria-selected="true">Météo</button>
+      <button type="button" role="tab" data-s="aurores" aria-selected="false">Aurores</button>
+      <button type="button" role="tab" data-s="drone" aria-selected="false">Drone</button>
+      <button type="button" role="tab" data-s="reglages" aria-selected="false">Réglages</button>
+      <button type="button" role="tab" data-s="listes" aria-selected="false">Check-lists</button>
+      <button type="button" role="tab" data-s="culture" aria-selected="false">Culture</button>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
-<div class="hero">
-  <div class="eyebrow">Carnet de terrain</div>
 
-<div class="tiles">
-    <div class="tile"><div class="k">Nuits à jouer</div><div class="v">5 · 6 · 11</div><div class="s">Ciel dégagé annoncé. Pluie du 7 au 9.</div></div>
-  <div class="tile"><div class="k">Fenêtre aurores</div><div class="v">22h30 → 3h</div><div class="s">Pas de nuit noire complète, mais assez sombre dès le crépuscule nautique.</div></div>
-  <div class="tile"><div class="k">Activité solaire</div><div class="v">Kp 2</div><div class="s">Calme, mais à 68° N ça suffit si le ciel est clair. Kp 3 le 12.</div></div>
-</div>
-
-  <h1>Sept nuits sous l'ovale auroral</h1>
-  <p class="lead">Météo, aurores, drone et réglages, condensés sur une page. La feuille de route et le programme du séjour sont dans la version privée du carnet. Prévisions du 2 septembre, à rafraîchir la veille.</p>
-</div>
-
-<section id="plan">
-  <h2>Itinéraire</h2>
-  <div class="note">Le programme du séjour est dans la version privée du carnet.</div>
-</section>
-
-<section id="meteo">
-  <h2>Météo et obscurité</h2>
+<section id="meteo" class="on">
+  <h2>Météo</h2>
   <figure><svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Couverture nuageuse et pluie prévues du 5 au 12 septembre">
 <rect width="100%" height="100%" fill="var(--surface)"/>
 <line x1="60" y1="240.0" x2="980" y2="240.0" stroke="var(--line)" stroke-dasharray="4 4"/><text x="52" y="245.0" text-anchor="end" font-size="14" fill="var(--muted)">0%</text>
@@ -184,6 +152,19 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
 <rect x="888.0" y="55.2" width="69.0" height="184.8" rx="6" fill="var(--twilight)"/>
 <text x="922.5" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">Sam 12</text><text x="922.5" y="282" text-anchor="middle" font-size="14" fill="var(--muted)">8–11 °C</text>
 </svg><figcaption>Prévisions met.no pour Leknes, relevées le 2 septembre à 15h30. Hauteur des barres : couverture nuageuse moyenne. Gouttes : pluie prévue. Vent faible toute la semaine, 4 à 8 m/s.</figcaption></figure>
+  <div class="grid2">
+    <div class="card"><h3>À retenir</h3><ul><li>7 à 14 °C, averses du lundi 7 au mercredi 9, sec mais gris le jeudi, dégagé samedi 5, dimanche 6 et vendredi 11.</li><li>La météo change tous les quelques kilomètres : regarder la prévision du lieu exact, pas celle de l'archipel.</li><li>Trois couches, veste vraiment imperméable, bonnet et gants fins, chaussures déjà testées.</li></ul></div>
+    <div class="card"><h3>Sites et apps</h3><div class="links"><a href="https://www.yr.no/en/forecast/daily-table/1-276917/Norway/Nordland/V%C3%A5gan/Svolv%C3%A6r">Yr.no Svolvær</a><a href="https://www.yr.no/en/forecast/daily-table/1-275291/Norway/Nordland/Vestv%C3%A5g%C3%B8y/Leknes">Yr.no Leknes</a><a href="https://www.yr.no/en/forecast/daily-table/1-276717/Norway/Nordland/Moskenes/Reine">Yr.no Reine</a><a href="https://www.yr.no/en/forecast/daily-table/1-259873/Norway/Nordland/Bod%C3%B8/Bod%C3%B8">Yr.no Bodø</a><a href="https://www.windy.com/68.15/13.6?68.15,13.6,8">Windy</a></div><p style="margin-top:.6rem">Yr.no est la météo officielle norvégienne, la plus fiable ici, avec les nuages heure par heure. Windy pour la couche de nuages bas et le vent en rafales.</p></div>
+  </div>
+</section>
+
+<section id="aurores">
+  <h2>Aurores</h2>
+  <div class="tiles">
+    <div class="tile"><div class="k">Nuits à jouer</div><div class="v">5 · 6 · 11</div><div class="s">Ciel dégagé annoncé. Pluie du 7 au 9.</div></div>
+    <div class="tile"><div class="k">Fenêtre utile</div><div class="v">22h30 → 3h</div><div class="s">Assez sombre dès le crépuscule nautique, cœur de nuit 23h30-1h30.</div></div>
+    <div class="tile"><div class="k">Activité solaire</div><div class="v">Kp 2</div><div class="s">Calme, mais à 68° N ça suffit si le ciel est clair. Kp 3 le 12.</div></div>
+  </div>
   <figure><svg viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fenêtre d'obscurité chaque nuit">
 <rect width="100%" height="100%" fill="var(--surface)"/>
 <line x1="110.0" y1="38" x2="110.0" y2="200" stroke="var(--line)"/><text x="110.0" y="32" text-anchor="middle" font-size="14" fill="var(--muted)">18h</text>
@@ -220,20 +201,16 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
 <rect x="670" y="208" width="16" height="14" rx="3" fill="var(--night)"/><text x="692" y="220" font-size="13" fill="var(--muted)">nuit nautique, le plus sombre</text>
 </svg><figcaption>Le soleil se couche vers 21h et se lève vers 6h. À 68° N, en septembre, la nuit astronomique n'existe pas encore : la bande la plus sombre est la nuit nautique, suffisante pour les aurores.</figcaption></figure>
   <div class="grid2">
-    <div class="card"><h3>Ce que ça change</h3><ul><li>Golden hour longue : environ 1h15 le matin et le soir, blue hour de 21h30 à 22h30.</li><li>Températures 7 à 14 °C : trois couches, bonnet et gants fins pour les affûts.</li><li>Apps : Yr.no (nuages heure par heure), Aurora Forecast ou NorwayLights (Kp), Windy (nuages bas).</li></ul></div>
-    <div class="card"><h3>Lire le Kp ici</h3><p>La NOAA prévoit Kp 2 toute la semaine, 3 les 12 et 13. Sous l'ovale auroral, Kp 2 donne déjà un arc vert bas sur l'horizon nord. Le ciel dégagé compte plus que le Kp : on suit les nuages, pas l'indice.</p></div>
+    <div class="card"><h3>Comment ça marche ici</h3><ul><li>Les Lofoten sont sous l'ovale auroral : un Kp 2 donne déjà un arc vert bas sur l'horizon nord. Le ciel dégagé compte plus que le Kp.</li><li>Elles arrivent n'importe quand entre 22h30 et 3h, souvent par vagues de 10 à 20 min : patience, thermos.</li><li>S'éloigner des lampadaires, la E10 au sud est très éclairée. Viser le nord, avec un premier plan : rorbu, pont, plage.</li><li>Être mobile : la météo change tous les quelques kilomètres.</li></ul></div>
+    <div class="card"><h3>Sites et apps</h3><div class="links"><a href="https://www.swpc.noaa.gov/products/aurora-30-minute-forecast">NOAA aurore 30 min</a><a href="https://www.swpc.noaa.gov/products/3-day-forecast">NOAA 3 jours</a><a href="https://www.swpc.noaa.gov/products/27-day-outlook">NOAA 27 jours</a><a href="https://www.spaceweatherlive.com/en/auroral-activity.html">SpaceWeatherLive</a><a href="https://www.yr.no/en/forecast/daily-table/1-275291/Norway/Nordland/Vestv%C3%A5g%C3%B8y/Leknes">Yr.no nuages</a><a href="https://souvenirs.vincent.voyage/iles-lofoten-aurores-boreales/">Guide Vincent Voyage</a><a href="https://lofotenlights.com/">Lofoten Lights</a></div><p style="margin-top:.6rem">Apps à installer : <b>Aurora Forecast</b> ou <b>NorwayLights</b> pour le Kp en temps réel avec alerte, <b>Yr.no</b> pour les nuages. Lofoten Lights : sorties guidées depuis Svolvær, 100 à 120 €, plus abordable qu'à Tromsø.</p></div>
   </div>
-</section>
-
-<section id="aurores">
-  <h2>Aurores : où se poster</h2>
-  <p>La E10 au sud est très éclairée. La règle : s'éloigner des lampadaires, viser le nord, être mobile parce que la météo change tous les quelques kilomètres, et patienter. Elles arrivent n'importe quand entre 22h30 et 3h.</p>
+  <h3 style="margin-top:1rem">Où se poster</h3>
   <div class="spots">
     <div class="z"><h3>Sud · Moskenesøya</h3><ul><li><b>Hamnøy</b> : la vue du pont, rorbuer rouges, moins de monde qu'attendu.</li><li><b>Sakrisøy</b> : moins lumineux que Reine, colline derrière.</li><li><b>Å</b> : bout de la route, lac et point de vue.</li><li><b>Reine</b> : magnifique mais éclairé.</li></ul></div>
     <div class="z"><h3>Plages nord · Vestvågøya</h3><ul><li><b>Eggum</b> : loin des lumières, grand espace.</li><li><b>Flakstad / Yttersand</b> : 360°, presque personne.</li><li><b>Haukland, Vik</b> : moins de foule qu'Uttakleiv, route Vikveien.</li><li><b>Uttakleiv</b> : la plage à aurores, mais bondée et éclairée.</li></ul></div>
     <div class="z"><h3>Autour de Svolvær</h3><ul><li><b>Fv888 Laukvik–Grunnfør</b> : pas de lampadaires, pont de Straumnes dégagé.</li><li><b>Gimsøya</b> : le golf, vue 360° sans lumière.</li><li><b>Hopen</b> : pont sur le lac, vue montagnes.</li><li><b>Route d'Henningsvær</b> : vue ouest sans obstacle.</li></ul></div>
   </div>
-  <div class="note"><b>Kit affût.</b> Thermos, chaufferettes, lampe frontale rouge, batteries au chaud dans la veste, trépied lesté, et le Lumix réglé sur C2 avant de sortir de la voiture. Agence de secours : Lofoten Lights depuis Svolvær, 100 à 120 €.</div>
+  <div class="note"><b>Kit affût.</b> Thermos, chaufferettes, lampe frontale rouge, batteries au chaud dans la veste, trépied lesté, et le Lumix réglé sur C2 avant de sortir de la voiture. Les réglages détaillés sont dans l'onglet Réglages.</div>
 </section>
 
 <section id="drone">
@@ -308,7 +285,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
 <rect x="735" y="524" width="14" height="12" fill="var(--nofly)" fill-opacity="0.5" stroke="var(--nofly)"/><text x="758" y="535" font-size="14" fill="var(--ink)">Parc, réserve, cercle aéroport</text>
 <text x="12" y="548" font-size="12" fill="var(--muted)">Géozones officielles Luftfartstilsynet, éd. sept. 2026 · côtes Natural Earth</text></svg><figcaption>Chaque spot a été testé contre les polygones du fichier officiel des géozones (édition septembre 2026). La bande rouge à l'ouest est le parc national Lofotodden, les disques sont les 5 km des aéroports de Leknes et Svolvær.</figcaption></figure>
   <div class="grid2">
-    <div class="card"><h3>Le cadre</h3><ul><li>Numéro d'opérateur EASA collé sur le drone, certificat A1/A3 sur le téléphone. Pas d'assurance obligatoire sous 250 g.</li><li>120 m max, à vue, 150 m des gens et des maisons, jamais au-dessus des randonneurs, surfeurs ou moutons.</li><li>Dans les 5 km d'un aéroport : permission via l'app <b>NinoxDrone2</b> (Avinor), gratuite, accordée par la tour selon le trafic.</li><li>Au-delà des 5 km, la TIZ bleue ne bloque pas un vol sous 120 m.</li></ul></div>
+    <div class="card"><h3>Le cadre</h3><ul><li>Numéro d'opérateur EASA collé sur le drone, certificat A1/A3 sur le téléphone. Pas d'assurance obligatoire sous 250 g.</li><li>120 m max, à vue, 150 m des gens et des maisons, jamais au-dessus des randonneurs, surfeurs ou moutons.</li><li>Dans les 5 km d'un aéroport : permission via l'app <b>NinoxDrone2</b> (Avinor), gratuite, accordée par la tour selon le trafic.</li><li>Au-delà des 5 km, la TIZ bleue ne bloque pas un vol sous 120 m.</li></ul><div class="links"><a href="https://dronesoner.no/?lang=en#10.02/67.9645/13.2367">Carte dronesoner.no</a><a href="https://www.luftfartstilsynet.no/en/drones/flying-in-norway/">Règles visiteurs</a><a href="https://www.avinor.no/en/practical-info/drone/">Avinor · NinoxDrone2</a><a href="https://www.ippc.no/ippc/index.jsp">NOTAM ippc.no</a></div></div>
     <div class="card"><h3>Trois pièges</h3><ul><li><b>Haukland</b> est 500 m hors du disque de Leknes : décoller côté ouest, ne pas dériver.</li><li>Entre Uttakleiv et Haukland, une station militaire interdit la caméra sur ses collines : rester sur la plage et la mer.</li><li><b>Eggum</b> : la réserve commence à 600 m du village, voler dos à la réserve ou renoncer.</li></ul></div>
   </div>
   <div class="scroll" style="margin-top:.8rem">
@@ -383,7 +360,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
   <p>Cochez sur le téléphone, la liste se souvient de l'état.</p>
   <div class="grid2">
     <div class="card check"><h3>Avant de partir</h3>
-      <label><input type="checkbox" data-k="c1"><span>Programme et contacts du séjour reçus</span></label>
+      <label><input type="checkbox" data-k="c8"><span>Enregistrement SAS fait vendredi 4 dès 7h15, cartes d'embarquement téléchargées</span></label>
       <label><input type="checkbox" data-k="c2"><span>Yr.no vérifié la veille de chaque sortie</span></label>
       <label><input type="checkbox" data-k="c3"><span>Numéro EASA collé sur le drone, certificat A1/A3 sur le téléphone</span></label>
       <label><input type="checkbox" data-k="c4"><span>dronesoner.no relu le 4 septembre, captures des zones</span></label>
@@ -398,6 +375,7 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
       <label><input type="checkbox" data-k="s4"><span>Trépied stable, mini-trépied, bonnette, chiffons, sacs congélation</span></label>
       <label><input type="checkbox" data-k="s5"><span>Lampe frontale rouge, thermos, gants tactiles, chaufferettes</span></label>
       <label><input type="checkbox" data-k="s6"><span>Cartes SD vidées : U3/V30 pour le Lumix, microSD 256 Go pour le drone</span></label>
+      <label><input type="checkbox" data-k="s7"><span>Batteries drone séparées et scotchées pour la cabine, rack vide</span></label>
     </div>
   </div>
 </section>
@@ -406,13 +384,13 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
   <h2>Pour briller au dîner</h2>
   <div class="grid2">
     <div class="card"><h3>Le skrei</h3><p>La morue arctique migre chaque hiver de la mer de Barents vers ces eaux pour frayer. Depuis mille ans c'est la ressource et le premier export. Séchée sans sel sur les hjell, dos au sud-ouest pour que la pluie lave la peau, ventre au nord pour que le vent froid sèche l'intérieur.</p></div>
-    <div class="card"><h3>Les rorbuer</h3><p>Dès le XI<sup>e</sup> siècle, des milliers de pêcheurs venaient l'hiver et logeaient dans ces cabanes rouges sur pilotis. Ce sont aujourd'hui les locations tout confort dans lesquelles on dormira.</p></div>
+    <div class="card"><h3>Les rorbuer</h3><p>Dès le XI<sup>e</sup> siècle, des milliers de pêcheurs venaient l'hiver et logeaient dans ces cabanes rouges sur pilotis. Ce sont aujourd'hui des locations tout confort.</p></div>
     <div class="card"><h3>Lofoten Seaweed</h3><p>À Napp, Angelita et Tamara récoltent du wakame atlantique. Les oursins dévorent les forêts de varech, donc on mange les envahisseurs. Les Vikings emportaient déjà des algues contre le scorbut.</p></div>
     <div class="card"><h3>Svolværgeita</h3><p>La « chèvre de Svolvær », gravie pour la première fois en 1910 : escalier construit par des sherpas, puis 56 m de granit en trois longueurs. Sans corde, la rando Fløya juste à côté offre la vue.</p></div>
   </div>
 </section>
 
-<footer>Sources : documentaire ARTE « Les îles Lofoten, archipels du nord » (2024), souvenirs.vincent.voyage, met.no, NOAA SWPC, Luftfartstilsynet et dronesoner.no (géozones sept. 2026), Avinor, Torghatten Nord, guidetolofoten.com, fiches techniques Panasonic et DJI. Fichiers détaillés dans P:\IA\4_DIVERS\NORVEGE_2026.</footer>
+<footer>Sources : billets SAS et confirmations d'hôtels, documentaire ARTE « Les îles Lofoten, archipels du nord » (2024), souvenirs.vincent.voyage, met.no, NOAA SWPC, Luftfartstilsynet et dronesoner.no (géozones sept. 2026), Avinor, fiches techniques Panasonic et DJI.</footer>
 </main>
 
 <script>
@@ -424,6 +402,12 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
   function apply(){document.documentElement.style.fontSize=sizes[idx]+'px';set('lofoten-sz',String(idx));}
   apply();
   document.querySelectorAll('.sz button').forEach(function(b){b.addEventListener('click',function(){var d=parseInt(b.dataset.sz,10);idx=d===0?1:Math.max(0,Math.min(3,idx+d));apply();});});
+  var navb=document.querySelectorAll('.nav button');
+  function show(id){document.querySelectorAll('main > section').forEach(function(s){s.classList.toggle('on',s.id===id);});navb.forEach(function(b){b.setAttribute('aria-selected',b.dataset.s===id?'true':'false');});set('lofoten-tab',id);window.scrollTo(0,0);}
+  navb.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.s);});});
+  var start=(location.hash||'').replace('#','')||get('lofoten-tab')||'meteo';
+  if(!document.getElementById(start))start='meteo';
+  show(start);
   var tabs=document.querySelectorAll('.tab');
   tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(o){o.setAttribute('aria-selected',o===t?'true':'false');});document.querySelectorAll('.panel').forEach(function(p){p.hidden=p.id!==t.dataset.p;});});});
   document.querySelectorAll('.check input').forEach(function(c){c.checked=get('lofoten-'+c.dataset.k)==='1';c.addEventListener('change',function(){set('lofoten-'+c.dataset.k,c.checked?'1':'0');});});
