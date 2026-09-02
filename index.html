@@ -69,6 +69,16 @@ section{margin:0 0 2.4rem;scroll-margin-top:7rem}
 .day p{margin:.15rem 0 0;font-size:.95rem}
 .day.best{border-color:var(--accent)}
 .day.rain{border-style:dashed}
+/* déroulé */
+.dayhead{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.1rem;color:var(--accent-ink);margin:1.2rem 0 .5rem;padding-bottom:.25rem;border-bottom:2px solid var(--accent)}
+.step{display:grid;grid-template-columns:5.2rem 1fr;gap:.7rem;background:var(--surface);border:2px solid var(--line);border-radius:.8rem;padding:.7rem .8rem;font-size:.95rem}
+.step .t{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;line-height:1.15;font-variant-numeric:tabular-nums}
+.step.best{border-color:var(--accent)}
+.step .links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.45rem}
+.step .links a{display:inline-block;text-decoration:none;background:var(--accent-soft);color:var(--accent-ink);border:2px solid var(--accent);border-radius:999px;padding:.25rem .7rem;font-weight:700;font-size:.85rem;min-height:1.8rem}
+.code{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:.06em;color:var(--ink);background:var(--surface2);padding:.05rem .45rem;border-radius:.4rem;white-space:nowrap}
+.ref{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:600px){.step{grid-template-columns:4.4rem 1fr}}
 /* tables */
 .tbl{width:100%;border-collapse:collapse;font-size:.95rem}
 .tbl th,.tbl td{text-align:left;padding:.45rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
@@ -128,9 +138,66 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
 <main class="wrap">
 <div class="hero">
   <div class="eyebrow">Carnet de terrain · Stephan &amp; Servane</div>
-  <h1>Sept nuits sous l'ovale auroral</h1>
-  <p class="lead">Tout ce qu'il faut savoir avant de sortir la voiture, le drone ou le trépied, condensé sur une page. Prévisions du 2 septembre, à rafraîchir la veille.</p>
-</div>
+
+<section id="voyage">
+  <h2>Le déroulé, heure par heure</h2>
+  <p>Du vendredi 4 au dimanche 13, dans l'ordre. Chaque étape a son heure, son adresse et un bouton pour se guider. Les heures limites d'enregistrement viennent des règles SAS à CDG et Bodø : à recontrôler dans l'app SAS la veille.</p>
+
+  <div class="dayhead">Vendredi 4 septembre · Anse → Senlis</div>
+  <div class="tl">
+    <div class="step"><div class="t">07h15</div><div><b>L'enregistrement SAS ouvre</b> pour les vols de samedi (30 h avant). Faire les deux passagers, télécharger les cartes d'embarquement. Référence <span class="ref">version complète</span> + nom de famille.<div class="links"><a href="https://www.flysas.com/fr-fr/checkin">Enregistrement SAS</a></div></div></div>
+    <div class="step"><div class="t">après-midi</div><div><b>Départ d'Anse</b> vers Senlis, environ 5 h de route par l'A6 avec les pauses. Viser un départ vers 14h30 pour arriver à 20h30.<div class="links"><a href="https://maps.apple.com/?daddr=110+rue+de+la+R%C3%A9publique,+60300+Senlis&dirflg=d">Plans</a><a href="https://www.google.com/maps/dir/?api=1&destination=110+rue+de+la+R%C3%A9publique,+60300+Senlis&travelmode=driving">Google Maps</a></div></div></div>
+    <div class="step best"><div class="t">20h30</div><div><b>Logis Hôtel Le Petit Bellon</b>, 110 rue de la République, 60300 Senlis. Chambre supérieure, petit-déjeuner inclus, <b>137,20 € à régler sur place</b>. Réservation <span class="ref">version complète</span> au nom de Graffin. Demander l'heure du petit-déjeuner et le stationnement.<div class="links"><a href="tel:+33344604901">☎ 03 44 60 49 01</a></div></div></div>
+  </div>
+
+  <div class="dayhead">Samedi 5 septembre · Senlis → CDG → Oslo → Bodø → Lofoten</div>
+  <div class="tl">
+    <div class="step"><div class="t">09h00</div><div><b>Départ de l'hôtel</b> pour le parking PAB de Roissy, environ 30 min. La réservation du parking commence à 9h, on arrive donc après.<div class="links"><a href="https://maps.apple.com/?daddr=Parking+PAB+A%C3%A9roport+Paris-Charles+de+Gaulle&dirflg=d">Plans</a><a href="https://www.google.com/maps/dir/?api=1&destination=Parking+PAB+A%C3%A9roport+Charles+de+Gaulle+Roissy&travelmode=driving">Google Maps</a></div></div></div>
+    <div class="step best"><div class="t">09h45</div><div><b>Parking PAB couvert</b>, à la barrière taper le code <span class="code">••••••</span>. <b>Ne pas prendre de ticket.</b> Interphone en cas de souci. Photographier le niveau et la rangée. Commande <span class="ref">version complète</span>, 123 € déjà payés, jusqu'au 12 à 21h59. Terminal 2B à 4 min à pied.</div></div>
+    <div class="step"><div class="t">10h30</div><div><b>Terminal 2B, dépôt des bagages SAS.</b> Un bagage en soute chacun. Faire confirmer que le billet est de bout en bout et que les étiquettes portent <b>BOO</b> (Bodø), pas seulement OSL. Les comptoirs SAS ferment 45 min avant le vol, donc au plus tard 12h30 : viser 10h30-11h00 pour la marge. Les batteries du drone restent en cabine.<div class="links"><a href="https://www.parisaeroport.fr/en/passengers/flights">Vols Paris Aéroport</a><a href="https://www.flysas.com/us-en/flight-status">Statut SAS</a></div></div></div>
+    <div class="step"><div class="t">12h55</div><div><b>Porte fermée 20 min avant le départ.</b> Être à la porte à 12h30 au plus tard.</div></div>
+    <div class="step best"><div class="t">13h15</div><div><b>Vol SK830 Paris-CDG → Oslo</b>, arrivée 15h30. Terminal 2B indiqué sur les billets, à revérifier le matin.</div></div>
+    <div class="step"><div class="t">15h30</div><div><b>Oslo, correspondance 1h05.</b> Suivre les panneaux <b>Domestic Transfer</b> près de D2 (billet unique, bagages déjà étiquetés BOO), puis la porte affichée pour Bodø. Pas de nouveau contrôle bagages en principe.<div class="links"><a href="https://www.avinor.no/en/airport/oslo/flight-times/">Vols Oslo</a></div></div></div>
+    <div class="step best"><div class="t">16h35</div><div><b>Vol SK4122 Oslo → Bodø</b>, arrivée 18h00.</div></div>
+    <div class="step"><div class="t">18h00</div><div><b>Bodø.</b> Récupérer les bagages et la voiture de location (à réserver, comptoirs à l'aéroport). Le terminal ferry est à 10 min en voiture.<div class="links"><a href="https://maps.apple.com/?daddr=Bod%C3%B8+fergekai&dirflg=d">Plans</a><a href="https://www.google.com/maps/dir/?api=1&destination=Bod%C3%B8+ferjekai&travelmode=driving">Google Maps</a></div></div></div>
+    <div class="step"><div class="t">19h00</div><div><b>Terminal ferry de Bodø</b>, se présenter 45 min avant, file avec réservation. Enregistrement nominatif fait à l'avance chez Torghatten Nord.<div class="links"><a href="https://www.torghatten-nord.no/">Torghatten Nord</a></div></div></div>
+    <div class="step best"><div class="t">19h45</div><div><b>Ferry Bodø → Moskenes</b>, 3h15, arrivée vers 23h00. Sur le pont côté nord au coucher du soleil, 21h27.</div></div>
+    <div class="step"><div class="t">23h00</div><div><b>Moskenes.</b> Hébergement côté Reine ou Hamnøy à 10 min (à réserver, prévenir de l'arrivée tardive). Premier affût aurores sur le pont de Hamnøy si le ciel est dégagé.</div></div>
+  </div>
+
+  <div class="dayhead">Du 5 au 12 · Lofoten</div>
+  <div class="tl"><div class="step"><div class="t">7 nuits</div><div>Le programme jour par jour est dans la section <a href="#plan">Itinéraire</a>, avec la météo et les nuits à aurores.</div></div></div>
+
+  <div class="dayhead">Vendredi 11 septembre · veille du retour</div>
+  <div class="tl">
+    <div class="step"><div class="t">07h55</div><div><b>L'enregistrement SAS ouvre</b> pour le retour. Référence <span class="ref">version complète</span>.<div class="links"><a href="https://www.flysas.com/fr-fr/checkin">Enregistrement SAS</a></div></div></div>
+    <div class="step"><div class="t">soir</div><div><b>Dormir côté Moskenes</b> pour le ferry du matin. Préparer le petit sac pour la nuit à Ury, batteries drone séparées et scotchées.</div></div>
+  </div>
+
+  <div class="dayhead">Samedi 12 septembre · Lofoten → Bodø → Copenhague → CDG → Ury</div>
+  <div class="tl">
+    <div class="step"><div class="t">06h15</div><div><b>Terminal de Moskenes</b>, 45 min avant le ferry.</div></div>
+    <div class="step best"><div class="t">07h00</div><div><b>Ferry Moskenes → Bodø</b>, arrivée vers 10h15. ⚠️ Horaire à confirmer chez Torghatten Nord ; sinon ferry du vendredi soir et nuit à Bodø, ou Widerøe Leknes → Bodø.</div></div>
+    <div class="step"><div class="t">10h30</div><div><b>Rendre la voiture</b> à l'aéroport de Bodø, 10 min du port.<div class="links"><a href="https://maps.apple.com/?daddr=Bod%C3%B8+lufthavn&dirflg=d">Plans</a><a href="https://www.google.com/maps/dir/?api=1&destination=Bod%C3%B8+lufthavn&travelmode=driving">Google Maps</a></div></div></div>
+    <div class="step"><div class="t">11h30</div><div><b>Dépôt des bagages SAS à Bodø</b>, ferme 45 min avant, donc 13h10 au plus tard. Étiquettes jusqu'à <b>CDG</b>.</div></div>
+    <div class="step best"><div class="t">13h55</div><div><b>Vol SK2479 Bodø → Copenhague</b>, arrivée 16h10.</div></div>
+    <div class="step"><div class="t">16h10</div><div><b>Copenhague, correspondance 1h15.</b> Suivre les panneaux Transfer jusqu'à la porte affichée. Norvège, Danemark et France sont dans Schengen : pas de contrôle de passeport à la correspondance.</div></div>
+    <div class="step best"><div class="t">17h25</div><div><b>Vol SK559 Copenhague → Paris-CDG</b>, arrivée 19h25 au 2B.</div></div>
+    <div class="step best"><div class="t">19h25</div><div><b>CDG.</b> Bagages, puis parking PAB à 4 min. À la sortie, même code <span class="code">••••••</span>. La réservation finit à <b>21h59</b> : 2h34 de marge, ne pas traîner.</div></div>
+    <div class="step"><div class="t">20h30</div><div><b>Route vers Ury</b>, environ 1h30 par l'A1 puis l'A6, dîner à prévoir sur la route.<div class="links"><a href="https://maps.apple.com/?daddr=Novotel+Fontainebleau+Ury,+RN+152,+77760+Ury&dirflg=d">Plans</a><a href="https://www.google.com/maps/dir/?api=1&destination=Novotel+Fontainebleau+Ury&travelmode=driving">Google Maps</a></div></div></div>
+    <div class="step best"><div class="t">22h30</div><div><b>Novotel Fontainebleau-Ury</b>, RN 152, chemin de Melun, 77760 Ury. Réservation <span class="ref">version complète</span>, 132,83 € déjà payés. Nuit corrigée par téléphone du 12 au 13 : le mail dit encore 19-20, l'ignorer. <b>Prévenir de l'arrivée tardive</b> et demander la confirmation écrite pour deux adultes et deux petits-déjeuners.<div class="links"><a href="tel:+33160712424">☎ 01 60 71 24 24</a><a href="mailto:H0384@accor.com">✉ H0384@accor.com</a></div></div></div>
+  </div>
+
+  <div class="dayhead">Dimanche 13 septembre · Ury → Anse</div>
+  <div class="tl">
+    <div class="step"><div class="t">avant 12h</div><div><b>Départ de l'hôtel</b>, petit-déjeuner inclus. Retour par l'A6, environ 4h30.<div class="links"><a href="https://maps.apple.com/?daddr=Anse,+69480&dirflg=d">Plans</a><a href="https://www.google.com/maps/dir/?api=1&destination=Anse+69480&travelmode=driving">Google Maps</a></div></div></div>
+  </div>
+
+  <div class="grid2" style="margin-top:.8rem">
+    <div class="card"><h3>Références</h3><div class="kv"><b>Agence</b><span>version complète (SOTRAVELING)</span><b>SAS</b><span>version complète + nom de famille</span><b>Billets</b><span>version complète</span><b>Parking</b><span>PAB, commande version complète, code ••••••</span><b>Senlis</b><span>version complète</span><b>Ury</b><span>version complète</span></div></div>
+    <div class="card"><h3>Drone dans l'avion</h3><ul><li>Tout le kit DJI en cabine, sous le siège : drone sans batterie, radiocommande éteinte, rack vide.</li><li>Les 3 batteries de 19,52 Wh séparées, contacts scotchés, chacune dans sa pochette. Jamais en soute, même si le sac cabine part en soute à la porte.</li><li>Rien ne se recharge à bord.</li></ul></div>
+  </div>
+</section>
 
 <div class="tiles">
   <div class="tile"><div class="k">Ferry aller</div><div class="v">19h45</div><div class="s">Bodø → Moskenes direct, 3h15. Réserver la voiture, être là 45 min avant.</div></div>
@@ -139,28 +206,9 @@ footer{color:var(--muted);font-size:.85rem;border-top:2px solid var(--line);padd
   <div class="tile"><div class="k">Activité solaire</div><div class="v">Kp 2</div><div class="s">Calme, mais à 68° N ça suffit si le ciel est clair. Kp 3 le 12.</div></div>
 </div>
 
-<section id="voyage">
-  <h2>Voyage : les infos pratiques</h2>
-  <p>Du vendredi 4 au dimanche 13 septembre, porte à porte. Références agence et SAS dans la version privée du carnet. Un bagage en soute par personne. Tout est recoupé avec les billets et les confirmations, à recontrôler la veille de chaque vol.</p>
-  <div class="tiles" style="margin:0 0 1rem">
-    <div class="tile"><div class="k">Parking CDG · code</div><div class="v">••••••</div><div class="s">PAB couvert, 4 min à pied du 2B. Même code à l'entrée et à la sortie, <b>ne pas prendre de ticket</b>. Commande (version privée), 123 € payés. Du 5/09 9h au 12/09 21h59.</div></div>
-    <div class="tile"><div class="k">Enregistrement SAS</div><div class="v">Ven 4 · 7h15</div><div class="s">Ouvre 30 h avant. Retour : vendredi 11 à 7h55. Référence SAS dans la version privée.</div></div>
-    <div class="tile"><div class="k">Correspondances</div><div class="v">1h05 · 1h15</div><div class="s">Oslo à l'aller (Domestic Transfer, bagages étiquetés BOO), Copenhague au retour.</div></div>
-  </div>
-  <div class="scroll"><table class="tbl">
-    <tr><th>Quand</th><th>Vol</th><th>Trajet</th><th>Départ → Arrivée</th></tr>
-    <tr><td>Sam 5</td><td>SK830</td><td>Paris-CDG (2B) → Oslo</td><td>13h15 → 15h30</td></tr>
-    <tr><td>Sam 5</td><td>SK4122</td><td>Oslo → Bodø</td><td>16h35 → 18h00</td></tr>
-    <tr><td>Sam 12</td><td>SK2479</td><td>Bodø → Copenhague</td><td>13h55 → 16h10</td></tr>
-    <tr><td>Sam 12</td><td>SK559</td><td>Copenhague → Paris-CDG (2B)</td><td>17h25 → 19h25</td></tr>
-  </table></div>
-  <div class="grid2" style="margin-top:.8rem">
-    <div class="card"><h3>Ven 4 → Sam 5 · Senlis</h3><p><b>Logis Hôtel Le Petit Bellon</b><br>110 rue de la République, 60300 Senlis<br><a href="tel:+33344604901">03 44 60 49 01</a></p><p>Arrivée prévue 20h30, chambre supérieure, petit-déjeuner inclus, 137,20 € à régler sur place. Réservation (version privée). Départ vers 9h pour le parking PAB.</p></div>
-    <div class="card"><h3>Sam 12 → Dim 13 · Ury</h3><p><b>Novotel Fontainebleau-Ury</b><br>RN 152, chemin de Melun, 77760 Ury<br><a href="tel:+33160712424">01 60 71 24 24</a> · <a href="mailto:H0384@accor.com">H0384@accor.com</a></p><p>Nuit corrigée par téléphone du 12 au 13 (le mail dit encore 19-20 : ignorer). Arrivée estimée 22h30-23h, prévenir de l'heure. Réservation (version privée), 132,83 € déjà payés. Demander la confirmation écrite pour deux adultes et deux petits-déjeuners. Retour Anse dimanche par l'A6.</p></div>
-    <div class="card"><h3>Drone dans l'avion</h3><ul><li>Tout le kit DJI en cabine, sous le siège : drone sans batterie, radiocommande éteinte, rack vide.</li><li>Les 3 batteries de 19,52 Wh séparées, contacts scotchés, chacune dans sa pochette. Jamais en soute, même si le sac cabine part en soute à la porte.</li><li>Rien ne se recharge à bord.</li></ul></div>
-    <div class="card"><h3>Avant de partir</h3><ul><li>Vérifier le terminal 2B et les portes sur SAS et Paris Aéroport le vendredi soir puis le samedi matin.</li><li>Au dépôt à CDG : faire confirmer le billet de bout en bout et les étiquettes BOO.</li><li>Photographier la place de parking (niveau, rangée).</li><li>Au retour : 2h34 entre l'atterrissage et la fin du parking, ne pas traîner aux bagages.</li></ul></div>
-  </div>
-</section>
+  <h1>Sept nuits sous l'ovale auroral</h1>
+  <p class="lead">Tout ce qu'il faut savoir avant de sortir la voiture, le drone ou le trépied, condensé sur une page. Prévisions du 2 septembre, à rafraîchir la veille.</p>
+</div>
 
 <section id="plan">
   <h2>Itinéraire : le sud, puis le nord</h2>
